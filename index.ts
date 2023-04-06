@@ -37,3 +37,18 @@ const arr2: MyList = []
 arr2.push(1)
 arr2.push('23')
 arr2.push(false)
+
+//generics
+//when you want to use types inside of class or function
+
+//this T lets me specify the typelater when I init an instance of this class
+class Observables<T>{
+    constructor(public value: T){}
+}
+
+let x:Observables<number>;
+
+let y:Observables<Person>;
+
+let z = new Observables(23)
+
